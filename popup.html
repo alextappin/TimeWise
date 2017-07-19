@@ -30,9 +30,9 @@
     </div>
   </div>
   <div class="timers">
-    <div class="timer">
+    <div ng-repeat="project in projects" class="timer">
       <div class="info">
-        <div class="name">WSNLA</div>
+        <div class="name">{{project.name}}</div>
         <div class="time-buttons">
           <button class="btn btn-xs btn-success">Start</button>
           <button class="btn btn-xs btn-danger">Stop</button>
@@ -40,9 +40,10 @@
       </div>
       <div class="times">
         <div class="edit">edit</div>
-         <div class="weekly" ng-show="selected == 'weekly'">23h 10m 03s</div> 
-        <div class="total" ng-show="selected == 'total'">93h 10m 03s</div>
+         <div class="weekly" ng-show="selected == 'weekly'">{{project.weekly}}</div> 
+        <div class="total" ng-show="selected == 'total'">{{project.total}}</div>
       </div>
+    </div>
     </div>
   </div>
 </body>
