@@ -4,4 +4,5 @@ var app = angular.module('app', []);
 
 app.controller('appCtrl', function($scope, $q, $location) {
   $scope.hello = "hello world";
+  $scope.selected = 'weekly';
 });
