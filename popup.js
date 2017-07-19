@@ -3,7 +3,7 @@
 var app = angular.module('app', []);
 
 app.controller('appCtrl', function($scope, $q, $location) {
-  $scope.hello = "hello world";
+  $scope.newName = "";
   $scope.selected = 'weekly';
   $scope.projects = [
     {
@@ -21,5 +21,14 @@ app.controller('appCtrl', function($scope, $q, $location) {
       weekly: '10h 12m 36s',
       total: '13h 10m 31s'
     }
-  ]
+  ];
+
+  $scope.addProject = function(name) {
+    var newProject = {
+      name,
+      weekly: '0d 0m 0s',
+      total: '0d 0m 0s',
+    }
+    $scope.projects.push(newProject);
+  }
 });

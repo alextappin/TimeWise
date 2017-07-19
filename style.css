@@ -13,9 +13,19 @@ body {
   color: #007a93;
   margin-top: -5px;
 }
+.top-bar div {
+  display: flex;
+  flex-flow: row;
+}
 .top-bar .btn{
   height: 20px;
   margin-top: 10px;
+}
+.top-bar input {
+  height: 20px;
+  margin-top: 10px;
+  width: 120px;
+  margin-right: 10px;
 }
 
 .times-header {
